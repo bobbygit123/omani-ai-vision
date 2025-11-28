@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+/* Fonts are loaded in index.html for better performance */
 
 @layer base {
   :root {
@@ -77,12 +77,44 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
     font-family: 'Inter', sans-serif;
+  }
+
+  body.font-arabic {
+    font-family: 'Cairo', sans-serif;
+  }
+
+  body.font-arabic h1,
+  body.font-arabic h2,
+  body.font-arabic h3,
+  body.font-arabic h4,
+  body.font-arabic h5,
+  body.font-arabic h6 {
+    font-family: 'Cairo', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Outfit', sans-serif;
+  }
+
+  /* RTL Support */
+  [dir="rtl"] .rtl-flip {
+    transform: scaleX(-1);
+  }
+
+  [dir="rtl"] .space-x-1 > :not([hidden]) ~ :not([hidden]),
+  [dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]),
+  [dir="rtl"] .space-x-3 > :not([hidden]) ~ :not([hidden]),
+  [dir="rtl"] .space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
+  }
+
+  [dir="rtl"] .gap-x-1,
+  [dir="rtl"] .gap-x-2,
+  [dir="rtl"] .gap-x-3,
+  [dir="rtl"] .gap-x-4 {
+    direction: rtl;
   }
 }
 
