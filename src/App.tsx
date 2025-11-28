@@ -4,6 +4,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import EnterpriseIntelligence from "./pages/EnterpriseIntelligence";
+import RealtimeIntelligence from "./pages/RealtimeIntelligence";
+import PredictivePower from "./pages/PredictivePower";
+import Vision2040 from "./pages/Vision2040";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -16,7 +20,10 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/enterprise-intelligence" element={<EnterpriseIntelligence />} />
+          <Route path="/realtime-intelligence" element={<RealtimeIntelligence />} />
+          <Route path="/predictive-power" element={<PredictivePower />} />
+          <Route path="/vision-2040" element={<Vision2040 />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
