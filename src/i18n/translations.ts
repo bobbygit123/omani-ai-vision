@@ -226,7 +226,7 @@ export const translations = {
       info: {
         title: "Contact Information",
         address: "Alqutoof Center, Floor 5, Office No A42, Ruwi, Muscat, Sultanate of Oman",
-        email: "sales@innovex.om",
+        email: "sales@innovex-om.com",
         phone: "+968 90605550",
       },
     },
@@ -458,7 +458,7 @@ export const translations = {
       info: {
         title: "معلومات الاتصال",
         address: "مركز القطوف، الطابق 5، مكتب رقم A42، روي، مسقط، سلطنة عُمان",
-        email: "sales@innovex.om",
+        email: "sales@innovex-om.com",
         phone: "+968 90605550",
       },
     },

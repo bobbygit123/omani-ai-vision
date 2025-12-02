@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer className="relative bg-card border-t border-border/30 overflow-hidden">
       {/* Geometric Pattern Overlay */}
       <div className="absolute inset-0 geometric-pattern opacity-30" />
-      
+
       {/* CTA Section */}
       <div className="relative border-b border-border/30">
         <div className="container mx-auto px-4 py-16">
@@ -98,8 +98,8 @@ export const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                <a href="mailto:sales@innovex.om" className="hover:text-primary transition-colors">
-                  sales@innovex.om
+                <a href="mailto:sales@innovex-om.com" className="hover:text-primary transition-colors">
+                  sales@innovex-om.com
                 </a>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
