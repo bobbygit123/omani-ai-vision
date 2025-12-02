@@ -1,31 +1,37 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Cpu, ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Footer = () => {
+  const { pathname } = useLocation();
+
   return (
     <footer className="relative bg-card border-t border-border/30 overflow-hidden">
       {/* Geometric Pattern Overlay */}
       <div className="absolute inset-0 geometric-pattern opacity-30" />
 
       {/* CTA Section */}
-      <div className="relative border-b border-border/30">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-              Ready to <span className="gradient-text">Transform</span> Your Enterprise?
-            </h2>
-            <p className="text-muted-foreground text-lg mb-8">
-              Let's discuss how our AI solutions can accelerate your digital transformation
-              with secure, localized systems built for Oman's future.
-            </p>
-            <Button variant="hero" size="xl" className="group">
-              Request an AI Architecture Consultation
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </Button>
+      {pathname !== '/contact-ai' && (
+        <div className="relative border-b border-border/30">
+          <div className="container mx-auto px-4 py-16">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+                Ready to <span className="gradient-text">Transform</span> Your Enterprise?
+              </h2>
+              <p className="text-muted-foreground text-lg mb-8">
+                Let's discuss how our AI solutions can accelerate your digital transformation
+                with secure, localized systems built for Oman's future.
+              </p>
+              <Button variant="hero" size="xl" className="group" asChild>
+                <Link to="/contact-ai">
+                  Request an AI Architecture Consultation
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Main Footer */}
       <div className="relative container mx-auto px-4 py-12">

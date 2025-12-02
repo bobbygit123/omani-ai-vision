@@ -34,6 +34,8 @@ const benefits = [
   "Enable knowledge preservation",
 ];
 
+import { Link } from "react-router-dom";
+
 const EnterpriseIntelligence = () => {
   return (
     <Layout>
@@ -41,31 +43,30 @@ const EnterpriseIntelligence = () => {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 geometric-pattern opacity-30" />
         <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/15 rounded-full blur-[120px]" />
-        
+
         <div className="relative container mx-auto px-4">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-primary/20 mb-6">
               <Brain className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-muted-foreground">Enterprise Intelligence</span>
             </div>
-            
+
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Transform Data Into{" "}
               <span className="gradient-text text-glow-cyan">Strategic Intelligence</span>
             </h1>
-            
+
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Harness the power of RAG systems and Knowledge Graphs to unlock enterprise-wide 
+              Harness the power of RAG systems and Knowledge Graphs to unlock enterprise-wide
               intelligence. Make decisions backed by your complete organizational knowledge.
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="lg" className="group">
-                Schedule Demo
-                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button variant="hero-outline" size="lg">
-                Technical Whitepaper
+              <Button variant="hero" size="lg" className="group" asChild>
+                <Link to="/contact-ai">
+                  Schedule Demo
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -86,7 +87,7 @@ const EnterpriseIntelligence = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <div 
+              <div
                 key={feature.title}
                 className="glass-card rounded-2xl p-8 border border-border/50 hover:border-primary/30 transition-all duration-300 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -118,7 +119,7 @@ const EnterpriseIntelligence = () => {
                 Our enterprise solutions are built for organizations that demand excellence,
                 security, and measurable results.
               </p>
-              
+
               <div className="grid sm:grid-cols-2 gap-4">
                 {benefits.map((benefit) => (
                   <div key={benefit} className="flex items-center gap-3">

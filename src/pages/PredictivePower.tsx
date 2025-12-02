@@ -35,6 +35,8 @@ const industries = [
   "Logistics & Supply Chain",
 ];
 
+import { Link } from "react-router-dom";
+
 const PredictivePower = () => {
   return (
     <Layout>
@@ -42,31 +44,30 @@ const PredictivePower = () => {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 geometric-pattern opacity-30" />
         <div className="absolute bottom-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
-        
+
         <div className="relative container mx-auto px-4">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-primary/20 mb-6">
               <TrendingUp className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-muted-foreground">Data Science</span>
             </div>
-            
+
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Turn Data Into{" "}
               <span className="gradient-text text-glow-cyan">Predictive Power</span>
             </h1>
-            
+
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Leverage advanced statistical modeling and machine learning to transform 
+              Leverage advanced statistical modeling and machine learning to transform
               historical data into accurate forecasts and actionable business insights.
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="lg" className="group">
-                Start Analysis
-                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button variant="hero-outline" size="lg">
-                View Methodologies
+              <Button variant="hero" size="lg" className="group" asChild>
+                <Link to="/contact-ai">
+                  Start Analysis
+                  <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -78,8 +79,8 @@ const PredictivePower = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-3 gap-8">
             {metrics.map((metric, index) => (
-              <div 
-                key={metric.label} 
+              <div
+                key={metric.label}
                 className="text-center animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -110,7 +111,7 @@ const PredictivePower = () => {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {capabilities.map((cap, index) => (
-              <div 
+              <div
                 key={cap.title}
                 className="glass-card rounded-2xl p-8 border border-border/50 hover:border-primary/30 transition-all duration-300 animate-fade-in"
                 style={{ animationDelay: `${index * 0.15}s` }}
@@ -140,13 +141,13 @@ const PredictivePower = () => {
                 <span className="gradient-text">Industries</span>
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                Our data science solutions adapt to the unique challenges and opportunities 
+                Our data science solutions adapt to the unique challenges and opportunities
                 of each industry, delivering customized predictive models and insights.
               </p>
-              
+
               <div className="grid grid-cols-2 gap-4">
                 {industries.map((industry) => (
-                  <div 
+                  <div
                     key={industry}
                     className="glass-card rounded-lg px-4 py-3 border border-border/50 text-foreground text-sm font-medium"
                   >

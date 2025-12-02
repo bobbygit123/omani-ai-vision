@@ -44,6 +44,8 @@ const initiatives = [
   },
 ];
 
+import { Link } from "react-router-dom";
+
 const Vision2040 = () => {
   return (
     <Layout>
@@ -52,28 +54,30 @@ const Vision2040 = () => {
         <div className="absolute inset-0 geometric-pattern opacity-30" />
         <div className="absolute inset-0 omani-border opacity-10" />
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-r from-primary/10 to-secondary/10 rounded-full blur-[150px]" />
-        
+
         <div className="relative container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-secondary/20 mb-6">
               <Target className="w-4 h-4 text-secondary" />
               <span className="text-sm font-medium text-muted-foreground">Vision 2040 Alignment</span>
             </div>
-            
+
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Building Oman's{" "}
               <span className="gradient-text text-glow-cyan">AI Future</span>
             </h1>
-            
+
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Our mission extends beyond technology deployment. We're committed to supporting 
-              Oman Vision 2040's goal of creating a diversified, knowledge-based economy 
+              Our mission extends beyond technology deployment. We're committed to supporting
+              Oman Vision 2040's goal of creating a diversified, knowledge-based economy
               powered by innovation and Omani talent.
             </p>
 
-            <Button variant="hero" size="lg" className="group">
-              Partner With Us
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            <Button variant="hero" size="lg" className="group" asChild>
+              <Link to="/contact-ai">
+                Partner With Us
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -93,7 +97,7 @@ const Vision2040 = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {pillars.map((pillar, index) => (
-              <div 
+              <div
                 key={pillar.title}
                 className="glass-card rounded-2xl p-8 border border-border/50 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -126,18 +130,18 @@ const Vision2040 = () => {
                 <Globe className="w-4 h-4 text-primary" />
                 <span className="text-sm font-medium text-muted-foreground">Local Impact</span>
               </div>
-              
+
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
                 Active <span className="gradient-text">Initiatives</span>
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                We're actively contributing to Oman's technological future through 
+                We're actively contributing to Oman's technological future through
                 strategic partnerships and targeted programs.
               </p>
 
               <div className="space-y-6">
                 {initiatives.map((initiative, index) => (
-                  <div 
+                  <div
                     key={initiative.title}
                     className="flex gap-4 animate-fade-in"
                     style={{ animationDelay: `${index * 0.1}s` }}
@@ -163,14 +167,14 @@ const Vision2040 = () => {
                   <span className="font-display font-semibold text-foreground">Our Promise</span>
                 </div>
                 <blockquote className="text-lg text-foreground italic mb-6 leading-relaxed">
-                  "Technology should serve the nation's aspirations. Every AI system we deploy 
-                  strengthens Oman's technological sovereignty while building local expertise 
+                  "Technology should serve the nation's aspirations. Every AI system we deploy
+                  strengthens Oman's technological sovereignty while building local expertise
                   for generations to come."
                 </blockquote>
                 <p className="text-muted-foreground text-sm">
                   — Innovex Group Leadership
                 </p>
-                
+
                 <div className="mt-8 pt-6 border-t border-border/50">
                   <div className="grid grid-cols-2 gap-4 text-center">
                     <div>

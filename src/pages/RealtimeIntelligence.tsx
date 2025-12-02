@@ -51,25 +51,25 @@ const RealtimeIntelligence = () => {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 geometric-pattern opacity-30" />
         <div className="absolute top-1/4 -right-32 w-96 h-96 bg-secondary/15 rounded-full blur-[120px]" />
-        
+
         <div className="relative container mx-auto px-4">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-secondary/20 mb-6">
               <Eye className="w-4 h-4 text-secondary" />
               <span className="text-sm font-medium text-muted-foreground">Edge AI & Automation</span>
             </div>
-            
+
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Intelligence at the{" "}
               <span className="gradient-text text-glow-violet">Edge</span>
             </h1>
-            
-            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Deploy real-time AI processing where it matters most. From video analytics to 
+
+            <p className="text-xl text-muted-foreground leading-relaxed mb-2">
+              Deploy real-time AI processing where it matters most. From video analytics to
               industrial automation, our edge solutions deliver instant intelligence.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            {/* <div className="flex flex-wrap gap-4">
               <Button variant="hero" size="lg" className="group">
                 Explore Solutions
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -77,7 +77,9 @@ const RealtimeIntelligence = () => {
               <Button variant="hero-outline" size="lg">
                 View Case Studies
               </Button>
-            </div>
+            </div> */}
+
+
           </div>
         </div>
       </section>
@@ -96,7 +98,7 @@ const RealtimeIntelligence = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-              <div 
+              <div
                 key={useCase.title}
                 className="glass-card rounded-2xl p-8 border border-border/50 hover:border-secondary/30 transition-all duration-300 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -130,7 +132,7 @@ const RealtimeIntelligence = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {applications.map((app, index) => (
-              <div 
+              <div
                 key={app.title}
                 className="glass-card rounded-xl p-6 border border-border/50 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -159,10 +161,10 @@ const RealtimeIntelligence = () => {
                 Enterprise-Grade <span className="gradient-text">Edge Infrastructure</span>
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                Our edge AI solutions are built on robust, scalable infrastructure designed 
+                Our edge AI solutions are built on robust, scalable infrastructure designed
                 for 24/7 operation in demanding environments.
               </p>
-              
+
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <Cpu className="w-6 h-6 text-primary mt-1" />

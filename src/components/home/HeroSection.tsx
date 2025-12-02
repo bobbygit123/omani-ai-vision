@@ -39,9 +39,7 @@ export const HeroSection = () => {
                 <ArrowRight className={`w-5 h-5 transition-transform group-hover:translate-x-1 ${isRTL ? 'rtl-flip' : ''}`} />
               </Link>
             </Button>
-            <Button variant="hero-outline" size="xl" asChild>
-              <Link to="/vision-2040">{t.hero.cta2}</Link>
-            </Button>
+
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-8 animate-fade-in" style={{ animationDelay: '0.4s' }}>
