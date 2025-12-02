@@ -16,7 +16,7 @@ export const Navbar = () => {
     { href: "/enterprise-intelligence", label: t.nav.enterpriseAI },
     { href: "/realtime-intelligence", label: t.nav.edgeAI },
     { href: "/predictive-power", label: t.nav.dataScience },
-    { href: "/vision-2040", label: t.nav.vision2040 },
+    // { href: "/vision-2040", label: t.nav.vision2040 },
     { href: "/our-platform", label: t.nav.techStack },
     { href: "/contact-ai", label: t.nav.connect },
   ];
@@ -39,10 +39,10 @@ export const Navbar = () => {
             <img 
               src={logo} 
               alt="Innovex Group" 
-              className="h-10 w-auto transition-all duration-300 group-hover:scale-105" 
+              className="h-14 w-auto bg-white rounded-lg p-1.5 transition-all duration-300 group-hover:scale-105" 
             />
             <div className="flex flex-col">
-              <span className="font-display font-bold text-lg text-foreground tracking-tight">
+              <span className="font-display font-bold text-xl text-foreground tracking-tight">
                 INNOVEX
               </span>
               <span className="text-[10px] text-primary font-medium tracking-widest uppercase">

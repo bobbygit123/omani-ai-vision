@@ -92,19 +92,19 @@ export const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-foreground mb-4">Contact</h4>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-3 text-muted-foreground">
-                <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
-                <span>Muscat, Sultanate of Oman</span>
+              <li className="flex items-start gap-3 text-muted-foreground">
+                <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                <span>Alqutoof Center, Floor 5, Office No A42, Ruwi, Muscat, Sultanate of Oman</span>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                <a href="mailto:ai@innovex-om.com" className="hover:text-primary transition-colors">
-                  ai@innovex-om.com
+                <a href="mailto:sales@innovex.om" className="hover:text-primary transition-colors">
+                  sales@innovex.om
                 </a>
               </li>
               <li className="flex items-center gap-3 text-muted-foreground">
                 <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                <span>+968 XXXX XXXX</span>
+                <span>+968 90605550</span>
               </li>
             </ul>
           </div>
